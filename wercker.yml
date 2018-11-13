@@ -29,3 +29,13 @@ dev:
           ./wercker-example
         reload: true
 
+push-docker:
+  steps:
+    - internal/docker-push:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        repository: $DOCKER_USERNAME/wercker-sg-meetup
+        ports: "5000"        
+        registry: https://registry.hub.docker.com/v2
+        tags: latest
+        cmd: /pipeline/source/wercker-example
