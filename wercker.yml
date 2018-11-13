@@ -10,10 +10,10 @@ build:
     - wercker/golint
 
     # Test the project
-    - script:
-        name: go test
-        code: |
-          go test ./...
+    #- script:
+     #   name: go test
+      #  code: |
+       #   go test ./...
 
     # Build the project
     - script:
